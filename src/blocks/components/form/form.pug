@@ -1,0 +1,69 @@
+include ../../../views/helpers/mixins.pug
+//- input
+mixin input(type, placeholder,label,required)
+  .input(class="input-"+(type ? type : '')+"")
+    if label 
+      span.label=label
+    if required
+      input(type=type, placeholder=placeholder, required)
+    else
+      input(type=type, placeholder=placeholder)
+//- input with icon
+mixin input-icon(type, placeholder,label,required,icon)
+  .input(class="input-"+(type ? type : '')+" input-icon")
+    if label 
+      span.label=label
+    .input-icon__wrap
+      span.icon: +icons(icon,'20')
+      if required
+        input(type=type, placeholder=placeholder, required)
+      else
+        input(type=type, placeholder=placeholder)
+//- textarea
+mixin textarea(placeholder,label,required)
+  .textarea
+    if label 
+      span.label=label
+    if required
+      textarea(placeholder=placeholder, required)
+    else
+      textarea(placeholder=placeholder)
+//- textarea
+mixin textarea-icon(placeholder,label,required,icon)
+  .textarea
+    if label 
+      span.label=label
+    .input-icon__wrap
+      span.icon: +icons(icon,'20')
+      if required
+        textarea(placeholder=placeholder, required)
+      else
+        textarea(placeholder=placeholder)
+//- select
+mixin select(label, data)
+  .select
+    if label 
+      span.label=label
+    select
+      each item, index in data
+        if(index == 0)
+          option(value=index,selected,disabled)= item
+        else
+          option(value=index)= item
+//- select-icon
+mixin select-icon(label, data,icon)
+  .select.select-icon
+    if label 
+      span.label=label
+    .select-icon__wrap
+      span.icon: +icons(icon,'20')
+      select
+        each item, index in data
+          if(index == 0)
+            option(value=index,selected,disabled)= item
+          else
+            option(value=index)= item
+//- submit button
+mixin submit(value,modify)
+  .input.input-submit
+    input(type="submit", value=value, class=""+(modify ? modify : '')+"")

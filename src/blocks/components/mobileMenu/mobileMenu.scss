@@ -1,0 +1,173 @@
+.mobileMenu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: $footerPrimary;
+    transition: all 0.3s ease;
+    overflow-y: scroll;
+    z-index: 1001;
+    height: 0;
+    overflow: hidden;
+
+    &.opened {
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+        padding: 36px 0;
+
+        &__logo {
+            width: 100%;
+            max-width: 160px;
+            margin-right: auto;
+            max-width: 144px;
+            display: flex;
+            align-items: center;
+
+            @media screen and (min-width: 577px) {
+                max-width: 160px;
+            }
+        }
+
+        &__logoImg {
+            position: relative;
+            display: block;
+            width: 44px;
+            height: 32px;
+
+            img {
+                @include imageCover();
+            }
+
+            @media screen and (min-width: 577px) {
+                width: 49px;
+                height: 35px;
+            }
+        }
+
+        &__logoText {
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 25px;
+            color: $white;
+            margin-left: 15px;
+
+            @media screen and (min-width: 577px) {
+                font-size: 24px;
+                line-height: 27px;
+            }
+        }
+
+        &__phone {
+            margin-right: 89px;
+            display: none;
+
+            a {
+                color: #fff;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: 0.065em;
+                text-transform: uppercase;
+            }
+
+            @media screen and (min-width: 577px) {
+                display: block;
+            }
+        }
+
+        &__toggle {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 34px 0;
+
+        &__phone {
+            display: block;
+            margin-top: 42px;
+            margin-bottom: 42px;
+
+            @media screen and (min-width: 577px) {
+                display: none;
+            }
+        }
+
+        &__links li {
+            padding: 28px 0;
+
+            @media screen and (min-width: 577px) {
+                padding: 33px 0;
+            }
+        }
+
+        &__links li,
+        &__phone {
+            a {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 23px;
+                color: #FFFFFF;
+
+                @media screen and (min-width: 769px) {
+                    font-size: 28px;
+                    line-height: 32px;
+                }
+
+                @media screen and (min-width: 481px) {
+                    font-size: 26px;
+                    line-height: 30px;
+                }
+
+                @media screen and (min-width: 376px) {
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+            }
+        }
+
+        .button {
+            margin-bottom: 28px;
+            width: 209px;
+            height: 51px;
+            text-align: center;
+        }
+
+        &__lang {
+            display: flex;
+
+            li {
+                padding: 14px 18px;
+                transition: all 0.2s ease;
+
+                img {
+                    width: 32px;
+                    height: 19px;
+                }
+            }
+
+            li.active {
+                border-radius: 9px;
+                background: #252649;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1153px) {
+    .mobileMenu {
+        display: none;
+    }
+}

@@ -1,0 +1,91 @@
+    .feedbackForm {
+        background: $formGrey;
+        padding: 60px 0px 82px;
+
+        @media screen and (min-width: 769px) {
+            padding: 74px 100px 82px;
+        }
+
+        form {
+            margin-top: 52px;
+
+            input:not(.button),
+            textarea {
+                background: none;
+                color: $placeholder;
+            }
+
+            .fieldset {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-bottom: 36px;
+            }
+
+            .input {
+                width: 100%;
+
+                @media screen and (min-width: 993px) {
+                    width: calc(100% / 3 - 44px);
+                }
+            }
+
+            .input:not(.input-submit),
+            .textarea {
+                font-size: 16px;
+                line-height: 18px;
+                margin-bottom: 36px;
+            }
+
+            .textarea {
+                width: 100%;
+            }
+
+            .agreement {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                @media screen and (min-width: 993px) {
+                    flex-wrap: nowrap;
+                }
+
+                a {
+                    color: $footerLink;
+                    text-decoration: underline;
+                }
+
+                &-text {
+                    color: $placeholder;
+                    font-size: 16px;
+                    line-height: 171%;
+                    max-width: 489px;
+                }
+
+                .input-submit {
+                    margin-top: 26px;
+
+                    .button {
+                        padding: 20px;
+                        width: 265px;
+                        height: 61px;
+                        margin: 0 auto;
+                    }
+
+                    @media screen and (min-width: 993px) {
+                        margin-top: 0;
+                    }
+
+                    @media screen and (min-width: 481px) {
+                        .button {
+                            padding: 15px 25px;
+                            margin-left: auto;
+                            margin-right: 0;
+                            height: 51px;
+                        }
+                    }
+                }
+            }
+        }
+    }

@@ -1,0 +1,82 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+@import "../helpers/functions";
+@import "../../blocks/components/breadcrumbs/breadcrumbs.scss";
+@import "../../blocks/components/checkbox/checkbox.scss";
+@import "../../blocks/components/page-banner/page-banner.scss";
+@import "../../blocks/components/edit-content/edit-content.scss";
+
+li.color {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    border: 1px solid;
+}
+
+.linkHover {
+    background: #84cdff
+}
+
+.btnBlue {
+    background: #4282bc
+}
+
+.btnBlueHover {
+    background: #8f94fb
+}
+
+.btnGradient {
+    background: linear-gradient(269.76deg, #8f94fb .21%, rgba(143, 148, 251, 0) 101.58%), #4282bc
+}
+
+.btnGradientHover {
+    background: #8f94fb
+}
+
+.borderBlue {
+    background: #4783c0
+}
+
+.borderBlue {
+    background: #8488e8
+}
+
+.textSecondary {
+    background: #455762
+}
+
+.borderGrey {
+    background: #d7d7d7
+}
+
+.placeholder {
+    background: #b4b4b4
+}
+
+.footerPrimary {
+    background: #1c224b
+}
+
+.footerLink {
+    background: #2e7aae
+}
+
+.formGrey {
+    background: #f9faff
+}
+
+.tableHeadBack {
+    background: #eef0fc
+}
+
+.tableHeadText {
+    background: #455762
+}
+
+.tableBorderText {
+    background: #b5b5b5
+}
+
+.tableHeadTextColor {
+    background: #455762
+}

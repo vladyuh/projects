@@ -1,0 +1,98 @@
+.mainpageBanner {
+    background-repeat: no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background-size: cover;
+
+    .section-h1 {
+        color: $white;
+    }
+
+    &-wrapper {
+        height: 100vh;
+        min-height: 665px;
+        max-height: 1024px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 112px 0 112px;
+        transition: all 0.25 ease-out;
+
+        @media screen and (min-width: 577px) {
+            //padding: 54px 0;
+        }
+
+        &__img {
+            @include imageCover;
+            z-index: -1;
+            background: $footerPrimary;
+
+            img {
+                -o-object-fit: cover;
+                object-fit: cover;
+                -o-object-position: center;
+                object-position: center;
+                height: 100%;
+                width: 100%;
+                animation: opacity 1s ease-in-out;
+            }
+        }
+    }
+
+    &-content {
+        &__btns {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 69px;
+
+            a {
+                margin-top: 37px;
+                color: #fff;
+                font-size: 18px;
+
+                &.link-hover {
+                    width: 148px;
+                    height: 21px;
+                }
+            }
+
+            .button {
+                width: 265px;
+                height: 61px;
+                text-align: center;
+                padding: 20px;
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (min-width: 1153px) {
+            &__btns {
+                margin-top: 78px;
+            }
+        }
+
+        @media screen and (min-width: 577px) {
+            &__btns {
+                flex-direction: row;
+                margin-top: 46px;
+
+                .button,
+                a {
+                    margin: 0 31px;
+                }
+
+                .button {
+                    width: 221px;
+                    height: 51px;
+                    padding: 15px 25px;
+                }
+            }
+        }
+
+        @media screen and (min-width: 361px) {
+            margin-top: 93px;
+        }
+    }
+}

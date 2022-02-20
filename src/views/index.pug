@@ -1,0 +1,126 @@
+include helpers/mixins
+include ../blocks/components/form/form.pug
+include ../blocks/components/headers/headers.pug
+include ../blocks/components/popup/popup.pug
+include ../blocks/modules/home/home-portfolio/home-portfolio.pug
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		title Главная
+		style: include ../styles/pages/critical/index.css
+		meta(name="theme-color" content="#fff")
+		meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+		meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+		link(rel="prefetch" href="img/favicons/favicon.ico" as="image" type="image/x-icon")
+		link(rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon")
+		link(rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png")
+		link(rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png")
+		link(rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png")
+		link(rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png")
+		link(rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png")
+		link(rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png")
+		link(rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png")
+		link(rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png")
+		link(rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png")
+		link(rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png")
+		link(rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png")
+		link(rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png")
+		link(rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png")
+		link(rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png")
+		link(rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png")
+		link(rel="preload" href="fonts/Mulish-Regular.woff2" as="font" crossorigin)
+		link(rel="preload" href="fonts/Mulish-SemiBold.woff2" as="font" crossorigin)
+		link(rel="preload" href="fonts/Mulish-Bold.woff2" as="font" crossorigin)
+		link(rel="prefetch" href="img/sprites/sprite.svg" as="image")
+	body.perf-no-animation.page
+		header#header
+			include ../blocks/modules/header/header.pug 
+		include ../blocks/components/mobileMenu/mobileMenu.pug
+		main
+			include ../blocks/modules/home/home-banner/home-banner.pug
+			+homePortfolio([
+				{
+					href: "https://dverimarket.by/",
+					src: '/img/projects/dveri.png',
+					title: 'Стальной дом',
+					caption: 'Магазин дверей в Минске - межкомнатные и входные двери | «Стальной дом»'
+				},
+				{
+					href: "https://dev.artroom.by/",
+					src: '/img/projects/art.png',
+					title: 'ARTROOM',
+					caption: 'ARTROOM — профессиональный дизайн интерьера в Минске, проекты домов.'
+				},
+				{
+					href: "https://intertobacco.by/",
+					src: '/img/projects/tabac.png',
+					title: 'ИНТЕР ТОБАККО',
+					caption: 'ООО "Интер Тобакко" – это молодое предприятие по выпуску табачной продукции в Беларуси.'
+				},
+				{
+					href: "https://grydom.by/",
+					src: '/img/projects/gry.png',
+					title: 'GRY',
+					caption: 'Многоквартирный жилой дом по улице Лазаренко'
+				},
+				{
+					href: "https://fiestaled.by/",
+					src: '/img/projects/fiesta.png',
+					title: 'FiestaLED',
+					caption: 'Компания FiestaLED производит светодиодные экраны для внутренней и наружной рекламы.'
+				},
+				{
+					href: "https://fermershop.by/",
+					src: '/img/projects/fermer.png',
+					title: 'ФермерШоп',
+					caption: 'Товары и оборудование для подсобного (фермерского) хозяйства'
+				},
+				{
+					href: "https://medvedev.by/",
+					src: '/img/projects/medved.png',
+					title: 'МЕДВЕДЕВ И К',
+					caption: 'Магазин дверей белорусcкого производства с установкой в Минске | «МЕДВЕДЕВ И К»'
+				},
+				{
+					href: "https://servera.by/",
+					src: '/img/projects/servera.png',
+					title: 'МЕРАТЕХ',
+					caption: 'Серверное оборудование в Минске. Поставщик серверного оборудования'
+				},
+				{
+					href: "https://gruzok.by/",
+					src: '/img/projects/gruzok.png',
+					title: 'ГрузОК',
+					caption: 'Грузоперевозки и переезды по всей Беларуси'
+				},
+				{
+					href: "https://estemed.by/",
+					src: '/img/projects/archi.png',
+					title: 'Эстемед',
+					caption: 'Центр медицинской косметологии "Эстемед"'
+				},
+				{
+					href: "https://tender-pc.ru/",
+					src: '/img/projects/aks.png',
+					title: 'Актуальные компьютерные системы',
+					caption: 'Компьютерное и серверное оборудование для офиса'
+				},
+				{
+					href: "https://donjuanmusical.ru/",
+					src: '/img/projects/donjuan.png',
+					title: 'Дон Жуан',
+					caption: 'Мюзикл Дон Жуан. Нерассказанная история — Официальный сайт'
+				},
+				])
+			include ../blocks/modules/home/home-form/home-form.pug
+			+popupCallback('callback','popup-callback')
+			+analysisCallback('analysis','popup-analysis')
+		footer: include ../blocks/modules/footer/footer.pug
+		link(rel="preload" href="styles/main.css" type="text/css" as="style" onload="this.onload = null; this.rel = 'stylesheet' ; ")
+		link(rel="preload" href="styles/index.css" type="text/css" as="style" onload="this.onload = null; this.rel = 'stylesheet' ; ")
+		link(rel="preload" href="styles/blocks.css" type="text/css" as="style" onload="this.onload = null; this.rel = 'stylesheet' ; ")
+		script(src="js/main.js")
+		script(src="js/index.js")

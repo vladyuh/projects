@@ -1,0 +1,27 @@
+mixin popupCallback(modify,ident)
+  .popup(id=ident, class=modify)
+    .popup-content
+      .popup-content__close: +icons('#ic_popup-close',26)
+      .popup-content__title.text-center Заказать звонок
+      form(action="/")
+        .fieldset
+          +input-icon('text','Введите имя',false,true,'#input-person')
+          +input-icon('tel','Введите телефон',false,true,'#input-phone')
+        .agreement          
+          +submit('Оставить заявку','button button-gradient')
+          .agreement-text.text-center Нажимая на кнопку “Отправить заявку” вы соглашаетесь с 
+                          a.link-hover(href="#" title="Политика конфиденциальности")  политикой конвиденциальности.
+mixin analysisCallback(modify,ident)
+  .popup(id=ident, class=modify)
+    .popup-content
+      .popup-content__close: +icons('#ic_popup-close',26)
+      .popup-content__title.text-center Заказать звонок
+      form(action="/")
+        .fieldset
+          +input-icon('text','Введите имя',false,true,'#input-person')
+          +input-icon('tel','Введите телефон',false,true,'#input-phone')
+          +input-icon('text','Ссылка на сайт',false,true,'#input-web')
+        .agreement          
+          +submit('Обсудить проект','button button-gradient')
+          .agreement-text.text-center Нажимая на кнопку “Отправить заявку” вы соглашаетесь с 
+                          a.link-hover(href="#" title="Политика конфиденциальности")  политикой конвиденциальности.

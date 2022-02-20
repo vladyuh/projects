@@ -1,0 +1,25 @@
+@mixin bgimage_cover {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    transition: 0.3s ease;
+}
+
+@mixin textAlign_center {
+    text-align: center;
+}
+
+@mixin rowFlex {
+    display: flex;
+}
+
+@mixin imageCover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}

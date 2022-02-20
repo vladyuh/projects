@@ -1,0 +1,14 @@
+section#feedback.feedbackForm
+  .container.container--lg
+    .section-h2.text-center Обратная связь
+    form(action="/")
+      .fieldset
+        +input-icon('text','Введите имя',false,true,'#input-person')
+        +input-icon('tel','Введите телефон',false,true,'#input-phone')
+        +input-icon('email','Введите  email',false,true,'#input-mail')
+        +textarea-icon('Что вас  интересует',false,true,'#input-message')
+      .agreement
+        .agreement-text
+        +submit('Оставить заявку','button button-gradient')
+
+

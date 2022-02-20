@@ -1,0 +1,14 @@
+include ../../../views/helpers/mixins.pug
+.container
+  .header
+    .header-logo
+    nav.header-nav
+      ul.header-nav__ul
+        li
+          a.link-hover(href="#footer" title="Контакты") Контакты
+    .header-links
+      a.header-links__link.link-hover(href="tel:+375296614771" title="+375296614771") +375296614771
+    .header-btns
+      a(href="#feedback").header-btns__btn.button.button-gradient Обратная связь
+    .header-toggle
+      +iconsWh('#ic_burger', 56, 40)

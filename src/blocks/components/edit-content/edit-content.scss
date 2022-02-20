@@ -1,0 +1,135 @@
+.edit-content {
+    h2 {
+        margin-bottom: 8px;
+    }
+
+    p {
+        margin: 19px 0;
+        font-size: 15px;
+        line-height: 180%;
+        color: $tableHeadTextColor;
+
+        @media screen and (min-width: 376px) {
+            font-size: 16px;
+        }
+    }
+
+    a {
+        color: $linkHover;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 180%;
+
+        @media screen and (min-width: 376px) {
+            font-size: 16px;
+        }
+    }
+
+    bold {
+        font-weight: bold !important;
+    }
+
+    ol {
+        list-style: none;
+        padding: 0;
+        counter-reset: item;
+
+        li {
+            padding-left: 23px;
+            position: relative;
+            counter-increment: item;
+            font-size: 15px;
+            line-height: 180%;
+            color: $tableHeadTextColor;
+
+            p {
+                margin: 5px 0;
+            }
+
+            @media screen and (min-width: 577px) {
+                padding-left: 45px;
+            }
+        }
+
+        li::before {
+            content: counter(item, decimal-leading-zero)'.';
+            position: absolute;
+            top: 0.15em;
+            left: 0;
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 180%;
+            color: $listMarker;
+        }
+    }
+
+    ul {
+        padding: 17px 0;
+
+        li {
+            padding-left: 23px;
+            position: relative;
+            font-size: 15px;
+            line-height: 180%;
+            color: $tableHeadTextColor;
+
+            @media screen and (min-width: 577px) {
+                padding-left: 46px;
+            }
+        }
+
+        li::before {
+            content: "";
+            position: absolute;
+            top: 0.7em;
+            left: 0;
+            display: block;
+            width: 7px;
+            height: 7px;
+            background: $listMarker;
+            border-radius: 50%;
+        }
+    }
+
+    .table {
+        overflow-x: auto;
+        margin: 35px 0 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        tr {
+            &.head {
+                background: $tableHeadBack;
+                font-size: 14px;
+                line-height: 180%;
+
+                th {
+                    color: $tableHeadTextColor;
+                    padding: 13px 20px;
+                }
+            }
+
+            th {
+                padding: 18px 20px;
+                border: 1px solid $tableBorderText;
+                font-size: 14px;
+                line-height: 150%;
+                font-weight: normal;
+            }
+
+            th:first-child {
+                text-align: left;
+            }
+
+            p {
+                margin: 0;
+                font-size: 14px;
+                line-height: 150%;
+            }
+        }
+    }
+}

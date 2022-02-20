@@ -1,0 +1,85 @@
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 80px;
+    background: $btnBlue;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    &-success {
+        &::after {
+            content: '';
+            width: 15px;
+            min-width: 14px;
+            height: 9px;
+            border: 2px solid #fff;
+            animation: none;
+            min-width: 12px;
+            display: inline-block;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-45deg) translateX(4px);
+            margin-left: 10px;
+            position: relative;
+            left: 5px;
+        }
+    }
+
+    &-loading {
+        cursor: wait !important;
+        &::after {
+            content: '';
+            width: 12px;
+            min-width: 12px;
+            height: 12px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            border-left-color: transparent !important;
+            margin-left: 10px;
+            transition: transform 0.5s linear;
+            animation: 0.5s linear loadingrotate infinite;
+            display: inline-block;
+            white-space: nowrap;
+            flex-wrap: nowrap;
+            position: relative;
+            left: 5px;
+        }
+    }
+}
+
+button.button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+
+    &:disabled {
+        background: $tableHeadBack;
+        cursor: not-allowed !important;
+        color: $textSecondary;
+    }    
+}
+
+
+.button:hover {
+    background: $btnBlueHover;
+}
+
+.button-gradient {
+    background: $btnGradient;
+}
+
+@keyframes loadingrotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

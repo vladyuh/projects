@@ -1,0 +1,30 @@
+.breadcrumb {
+
+    ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        overflow-x: auto;
+        white-space: nowrap;
+
+        & li {
+            font-weight: 600;
+
+            a {
+                color: $linkHover;
+            }
+
+            &::after {
+                content: '-';
+                display: inline-block;
+                position: relative;
+                margin: 0 24px;
+                color: $linkHover;
+            }
+
+            &:last-child::after {
+                display: none;
+            }
+        }
+    }
+}

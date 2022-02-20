@@ -1,0 +1,13 @@
+include ../breadcrumbs/breadcrumbs.pug
+mixin pageBanner(name, breadcrumbs,data,modify)
+  .pageBanner
+    .pageBanner-wrapper
+      .pageBanner-wrapper__img
+        picture
+            source(srcset="../img/common/background_1920.jpg",media="(min-width: 835px)")
+            source(srcset="../img/common/background_830.jpg",media="(min-width: 577px)")
+            source(srcset="../img/common/background_400.jpg",media="(min-width: 361px)")
+            img(src="../img/common/background.jpg", loading="lazy", alt="Background")
+      h1.section-h1.pageBanner-wrapper__title= name
+      if(breadcrumbs)
+        +breadcrumb(data,modify)

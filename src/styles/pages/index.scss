@@ -1,0 +1,10 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+@import "../helpers/functions";
+@import "../../blocks/modules/home/home-banner/home-banner.scss";
+@import "../../blocks/modules/home/home-development/home-development";
+@import "../../blocks/modules/home/home-services/home-services";
+@import "../../blocks/modules/home/home-form/home-form";
+//swiper css
+@import "../../styles/vendor/import/glide.core";
+@import "../../styles/vendor/import/glide.theme";

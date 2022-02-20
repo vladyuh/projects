@@ -1,0 +1,14 @@
+mixin homePortfolio(data)
+  section.portfolio
+    .container.lrg
+      h2.section-h2.text-center Мои проекты
+      .portfolio-slider
+        .portfolio-slider__items.glide__track(data-glide-el="track")
+          ul.porfolio-slider__items-wrapper.glide__slides
+            each item in data
+              li.glide__slide
+                a.portfolio-slider__item(href=item.href, title=item.title)
+                  .portfolio-slider__image
+                    img(src=item.src, alt=item.title, loading="eager")
+                  .portfolio-slider__title.section-h3=item.title
+                  .portfolio-slider__caption=item.caption

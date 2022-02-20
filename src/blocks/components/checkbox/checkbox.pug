@@ -1,0 +1,29 @@
+mixin checkbox(label, check, disabled)
+  label.checkbox
+    if check
+      if disabled
+        input(type="checkbox" checked="" disabled="")
+      else
+        input(type="checkbox" checked="")
+    else
+      if disabled
+        input(type="checkbox" disabled="")
+      else
+        input(type="checkbox")
+    span.checkbox__elem
+    span.checkbox__text!= label
+
+mixin radio(label, name, check, disabled)
+  label.radio
+    if check
+      if disabled
+        input(type="radio" name=name checked="" disabled)
+      else
+        input(type="radio" name=name checked="")
+    else
+      if disabled
+        input(type="radio" name=name disabled)
+      else
+        input(type="radio" name=name)
+    span.radio__elem
+    span.radio__text= label

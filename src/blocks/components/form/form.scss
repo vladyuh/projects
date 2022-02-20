@@ -1,0 +1,134 @@
+input,
+textarea {
+    outline: none;
+    resize: none;
+}
+
+input[type="submit"] {
+    border: none;
+    cursor: pointer;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(../img/svg/ic_dropdown.svg);
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: 99% center;
+
+
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+input,
+select,
+textarea {
+    border: none;
+    transition: all 0.25s ease;
+    border-bottom: 1px solid $borderBlue;
+    width: 100%;
+    outline: none;
+    padding: 16px;
+    font-size: 16px;
+    line-height: 18px;
+    color: #B4B4B4;
+    background-color: #fff;
+
+    &:focus {
+        border-color: $btnGradientHover;
+        color: #000;
+    }
+}
+
+.submitted {
+
+    input,
+    select,
+    textarea {
+        &:invalid {
+            border-bottom: 1px solid #DC143C;
+        }
+    }
+}
+
+.input,
+.select,
+.textarea {
+    display: flex;
+    flex-direction: column;
+}
+
+.input,
+.textarea {
+    &-icon__wrap {
+        position: relative;
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 3px;
+            display: flex;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+            transform: translateY(-50%);
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 24px 24px 24px 40px !important;
+        }
+    }
+}
+
+.select {
+    &-icon__wrap {
+        position: relative;
+
+        .icon {
+            position: absolute;
+            top: 16px;
+            left: 3px;
+            display: flex;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+        }
+
+        select {
+            width: 100%;
+            padding: 16px 16px 16px 40px !important;
+        }
+    }
+}
+
+form {
+    .agreement {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 26px;
+
+        a {
+            color: $footerLink;
+            text-decoration: underline;
+        }
+
+        &-text {
+            color: $placeholder;
+            font-size: 16px;
+            line-height: 171%;
+            max-width: 100%;
+
+            @media screen and (min-width: 577px) {
+                max-width: 50%;
+            }
+        }
+    }
+}

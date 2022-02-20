@@ -1,0 +1,61 @@
+.development-analysis{
+  background: $formGrey;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 34px 20px;
+  margin: 53px -20px 0;
+  max-width: 744px;
+
+  @media screen and (min-width: 481px){
+    margin-left: -25px;
+    margin-right: -25px;  
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @media screen and (min-width: 769px){
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1153px){
+    max-width: 100%;
+    align-items: center;
+    padding: 34px 46px;
+  }
+  
+  &__text{
+    width: 100%;
+    text-align: center;
+    .title{
+      margin-bottom: 5px;
+    }
+
+    @media screen and (min-width: 1153px){
+      text-align: left;
+      max-width: 666px;
+    }
+  }
+
+  &__btn{
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+    .button{
+      height: 61px;
+      width: 279px;
+      margin: 0 auto;      
+    }
+    @media screen and (min-width: 577px){
+      .button{
+        height: 51px;
+      }     
+    }
+    @media screen and (min-width: 1153px){
+      max-width: 279px;
+      margin-top: 0px;
+      margin-left: auto;    
+    }
+  }
+}
